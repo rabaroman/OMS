@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="3">
+    <test name = "OMStest">
+        <classes>
+            <class name="com.softserve.edu.oms.tests.login.ResetButtonTest">
+                <methods>
+                    <include name="verifyResetButtonFunctionality"/>
+                </methods>
+            </class>
+            <class name="com.softserve.edu.oms.tests.administration.NavigationButtonsTest">
+                <methods>
+                    <include name="verifyNavigationButtons"/>
+                </methods>
+            </class>
+            <class name="com.softserve.edu.oms.tests.createuser.ErrorMsgConfirmPasswordTest">
+                <methods>
+                    <include name="verifyErrorMsgUserWithNotConfirmedPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

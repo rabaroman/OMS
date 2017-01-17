@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="10" preserve-order="true">
+    <parameter name="browserName" value="Chrome" />
+    <parameter name="driverPath"
+               value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+    <test name="Test2">
+        <classes>
+            <class name="com.softserve.edu.oms.tests.createuser.LoginFieldIsCaseInsensitiveTest">
+                <methods>
+                    <include name="loginFieldIsCaseInsensitiveTest" />
+                    <include name="deleteUserFromDB" />
+                </methods>
+            </class>
+            <class name="com.softserve.edu.oms.tests.userinfo.SwitchingTabsFunctionalityTest">
+                <methods>
+                    <include name="tabSwitchingTest" />
+                </methods>
+            </class>
+
+            <class name="com.softserve.edu.oms.tests.administration.CorrectUserInfoIsDisplayedTest">
+                <methods>
+                    <include name="correctUserInfoIsDisplayedTest" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

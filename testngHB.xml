@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite  name="Harasym Test Suite" verbose="1" parallel="tests" thread-count="1">
+ 
+    <test name="Admin User Smoke Test">
+        <classes>
+            <class name="com.softserve.edu.oms.tests.login.AdminUserSmokeTest"/>
+        </classes>
+    </test>
+ 
+    <test name="Sorting Teable With Users Test">
+        <classes>
+            <class name="com.softserve.edu.oms.tests.administration.SortingByRoleRegionUsersTabeTest"/>
+        </classes>
+    </test>
+    
+     <test name="Seting Invalid Password While Creat New User">
+        <classes>
+            <class name="com.softserve.edu.oms.tests.createuser.InvalidPasswordSetWhileNewUserCreationTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OMStest" preserve-order="true" parallel="tests" thread-count="5">
+	<test name="LoginTest" preserve-order="true">
+		<classes>
+			<class name="com.softserve.edu.oms.tests.login.AdminUserSmokeTest">
+				<methods>
+					<include name="adminUserSmokeTest" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-28 -->
+			<class name="com.softserve.edu.oms.tests.login.LoginAsEveryUserTypeTest">
+				<methods>
+					<include name="assertAdministratorLogin" />
+					<include name="assertCustomerLogin" />
+					<include name="assertMerchandiserLogin" />
+					<include name="assertSupervisorLogin" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-29 -->
+			<class
+				name="com.softserve.edu.oms.tests.login.ResetButtonErrorMessagesTest">
+				<methods>
+					<include name="verifyResetButtonErrorMessagesForNonRegisteredUser" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-30 -->
+			<class
+				name="com.softserve.edu.oms.tests.login.LoginWithEmptyCredentialsTest">
+				<methods>
+					<include name="verifyErrorMessageWhenUserLoginWithEmptyCredentials" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-37 -->
+			<class name="com.softserve.edu.oms.tests.login.ResetButtonTest">
+				<methods>
+					<include name="verifyResetButtonFunctionality" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-38 -->
+			<class name="com.softserve.edu.oms.tests.login.RememberMeTest" />
+		</classes>
+	</test>
+	<test name="UserInfoTest" preserve-order="true">
+		<classes>
+			<!-- LVSETOMS-41 -->
+			<class
+				name="com.softserve.edu.oms.tests.userinfo.SwitchingTabsFunctionalityTest">
+				<methods>
+					<include name="SwitchingTabsFunctionalityTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AdministrationTest" preserve-order="true">
+		<classes>
+			<!-- LVSETOMS-43 -->
+			<class
+				name="com.softserve.edu.oms.tests.administration.ChangeNumberOfUserPerPageTest">
+				<methods>
+					<include name="verifyChangeUserNumberPerPage" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-44 -->
+			<class
+				name="com.softserve.edu.oms.tests.administration.NavigationButtonsTest">
+				<methods>
+					<include name="verifyNavigationButtons" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-45 -->
+			<class
+				name="com.softserve.edu.oms.tests.administration.CorrectUserInfoIsDisplayedTest">
+				<methods>
+					<include name="CorrectUserInfoIsDisplayedTest" />
+				</methods>
+			</class>
+			
+			<!-- LVSETOMS-46 -->
+			<class
+				name="com.softserve.edu.oms.tests.administration.SortingByIDFirstNameLastNameTest">
+				<methods>
+					<include name="assertSortById" />
+					<include name="assertSortByFirstNameASC" />
+					<include name="assertSortByFirstNameDESC" />
+					<include name="assertSortByLastNameASC" />
+					<include name="assertSortByLastNameDESC" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-47 -->
+			<class name="com.softserve.edu.oms.tests.administration.FindingTest">
+				<methods>
+					<include name="testOptionValues" />
+					<include name="verifySearchByEquals" />
+					<include name="verifySearchByNotEquals" />
+					<include name="verifySearchLastName" />
+					<include name="verifySearchLoginName" />
+					<include name="verifySearchRole" />
+				</methods>
+			</class>
+			<class
+				name="com.softserve.edu.oms.tests.administration.SortingByRoleRegionUsersTabeTest">
+				<methods>
+					<include name="sortUsersTableTest" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-53 -->
+			<class
+				name="com.softserve.edu.oms.tests.administration.ChangeNumberOfUsersTest">
+				<methods>
+					<include name="verifyChangePageNumber" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="CreateUserTest" preserve-order="true">
+		<classes>
+			 <!--LVSETOMS-49-->
+			<class
+				name="com.softserve.edu.oms.tests.createuser.UserWithEmptyMandatoryFieldsCreationTest">
+				<methods>
+					<include name="verifyErrorMessagesDuringUserCreation" />
+				</methods>
+			</class>
+			 <!--LVSETOMS-50-->
+			<class name="com.softserve.edu.oms.tests.createuser.CreateNewUserTest">
+				<methods>
+					<include name="assertNonExistence" />
+					<include name="createNewUser" />
+					<include name="deleteUser" />
+				</methods>
+			</class>
+			 <!--LVSETOMS-51-->
+			<class
+				name="com.softserve.edu.oms.tests.createuser.UserWithLongCredentialsCreationTest">
+				<methods>
+					<include name="verifyCreateNewUserWithLongCredentials" />
+				</methods>
+			</class>
+			 <!--LVSETOMS-54-->
+			<class
+				name="com.softserve.edu.oms.tests.createuser.CreateInvalidNewUserTest">
+				<methods>
+					<include name="verifyErrorMessageCreatingUserWithInvalidData" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-55 -->
+			<class name="com.softserve.edu.oms.tests.createuser.CancelCreateUserTest" />
+			<!-- LVSETOMS-56 -->
+			<class
+				name="com.softserve.edu.oms.tests.createuser.LoginFieldIsCaseInsensitiveTest">
+				<methods>
+					<include name="LoginFieldIsCaseInsensitiveTest" />
+					<include name="deleteUserFromDB" />
+				</methods>
+			</class>
+			<!-- LVSETOMS-58 -->
+			<class
+				name="com.softserve.edu.oms.tests.createuser.ErrorMsgConfirmPasswordTest">
+				<methods>
+					<include name="verifyErrorMsgUserWithNotConfirmedPassword" />
+				</methods>
+			</class>
+			
+			<class
+				name="com.softserve.edu.oms.tests.createuser.InvalidPasswordSetWhileNewUserCreationTest">
+				<methods>
+					<include name="setInvalidPasswordWhileCreateNewUserTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

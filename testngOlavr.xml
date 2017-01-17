@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Oleh test suite">
+    <test name="Oleh tests" >
+        <classes>
+            <class name="com.softserve.edu.oms.tests.createuser.CancelCreateUserTest"/>
+            <class name="com.softserve.edu.oms.tests.login.RememberMeTest"/>
+            <class name="com.softserve.edu.oms.tests.administration.FindingTest">
+                <methods>
+                    <include name="testOptionValues" />
+                    <include name="verifySearchByEquals" />
+                    <include name="verifySearchByNotEquals" />
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+</suite>

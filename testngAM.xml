@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests"  thread-count="2" verbose="10">
+	<test name="Test1" >
+		<classes>
+			<class name="com.softserve.edu.oms.tests.createuser.CreateInvalidNewUserTest">
+				<methods>
+					<include name="verifyErrorMessageCreatingUserWithInvalidData" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test2">
+	<classes>
+		<class name="com.softserve.edu.oms.tests.administration.ChangeNumberOfUserPerPageTest">
+			<methods>
+				<include name="verifyChangeUserNumberPerPage" />
+			</methods>
+		</class>
+	</classes>
+	</test>
+	<test name="Test3">
+	<classes>
+		<class name="com.softserve.edu.oms.tests.login.LoginWithEmptyCredentialsTest">
+			<methods>
+				<include name="verifyErrorMessageWhenUserLoginWithEmptyCredentials" />
+			</methods>
+		</class>
+	</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="10">
+	<parameter name="browserName" value="Chrome" />
+	<parameter name="driverPath"
+		value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+	<test name="Test1">
+		<classes>
+			<class name="com.softserve.edu.oms.tests.administration.FindingTest">
+				<methods>
+					<include name="verifySearchLastName" />
+					<include name="verifySearchLoginName" />
+					<include name="verifySearchRole" />
+				</methods>
+			</class>
+			<class name="com.softserve.edu.oms.tests.administration.ChangeNumberOfUsersTest">
+				<methods>
+					<include name="verifyChangePageNumber" />
+				</methods>
+			</class> 
+		</classes>
+	</test>  
+ 
+</suite> 
